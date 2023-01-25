@@ -1,5 +1,6 @@
 import 'package:classlytics_frontend/barcode.dart';
 import 'package:classlytics_frontend/login.dart';
+import 'package:classlytics_frontend/scan.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -23,6 +24,15 @@ class DashboardPage extends StatelessWidget {
           children: [
             MaterialButton(
               child: Text('Get Attendance'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScanPage()),
+                );
+              },
+            ),
+            MaterialButton(
+              child: Text('Create Barcode'),
               onPressed: () {
                 Navigator.push(
                   context,
